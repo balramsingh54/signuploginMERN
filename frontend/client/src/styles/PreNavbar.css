@@ -1,0 +1,33 @@
+.PreNav {
+  background-color: rgb(29, 28, 28);
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  color: #ffffff;
+}
+
+.PreNav > div {
+  padding: 12px 40px;
+}
+
+.PreNav > div > span {
+  color: lightgrey;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.PreNav > div > a {
+  text-decoration: none;
+  font-size: 13px;
+  margin: 10px;
+  color: gray;
+  font-weight: 300;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.PreNav > div > a:hover {
+  color: #ffffff;
+}
+
+.PreNav > div svg {
+  fill: lightgray;
+}

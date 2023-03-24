@@ -1,0 +1,20 @@
+
+/* .image-offer{
+    display: inline;
+    padding: 12px;
+} */
+
+.offer-section{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.offer-section img{
+    margin: 0 5px;
+    transition: all .5s;
+}
+
+.offer-section img:hover{
+    box-shadow: 6px 6px 15px rgb(53 53 53 / 36%)
+}

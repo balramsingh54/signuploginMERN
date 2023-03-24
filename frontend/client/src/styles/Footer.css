@@ -1,0 +1,24 @@
+.Prefooter1{
+    justify-content: center;
+    background-color: rgb(236, 228, 228);
+    padding-top: 50px;
+}
+
+.Prefooter2{
+    background-color: #ffffff;
+    text-align: left;
+    padding: 25px 0 5px 20px;
+    color: gray;
+}
+
+.hvr:hover{
+    color: black;
+}
+
+.Prefooter3{
+    padding: 50px 0 20px 20px;
+}
+
+p{
+    font-size: 13px;
+}

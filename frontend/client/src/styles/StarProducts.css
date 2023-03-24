@@ -1,0 +1,15 @@
+.starProduct1{
+    display: flex;
+}
+
+.uppertwo{
+    display: flex;
+}
+
+.starpdt:hover{
+    transition: all .5s;
+    transform: translateY(-0.4vmax);
+    box-shadow: 6px 6px 15px rgb(53 53 53 / 36%)
+}
+
+

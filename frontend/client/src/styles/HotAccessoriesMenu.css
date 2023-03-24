@@ -1,0 +1,18 @@
+.HotAccessories{
+    justify-content: center !important;
+    margin-left: 28%;
+    padding-bottom: 20px;
+}
+
+.hotaccessoriesLink{
+    text-decoration: none;
+    color: #5e5e5e;
+    margin: 1vmax;
+    padding: 0.5vmax 0;
+    font-family: "Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+}
+
+.hotaccessoriesLink:hover{
+    color: #ff4500;
+    border-bottom: 1px solid #ff4500;
+}

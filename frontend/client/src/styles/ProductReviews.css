@@ -1,0 +1,25 @@
+.reviews{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+img{
+    padding: 10px;
+}
+
+.hovr:hover{
+    transition: all .5s;
+    transform: translateY(-0.4vmax);
+    box-shadow: 6px 6px 15px rgb(53 53 53 / 36%)
+}
+
+.lll{
+    margin-left: 20px;
+    color: #5e5e5e;
+}
+
+.lll4{
+    margin-left: 20px;
+    color: #ff4500;
+}
