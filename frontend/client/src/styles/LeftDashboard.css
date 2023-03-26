@@ -1,0 +1,92 @@
+:root{
+    --blue: #06257a;
+    --white: #fff;
+    --gray: #EFF2F9;
+    --black: #010717;
+    --black2: #9D9FA4;
+}
+body{
+    overflow-x: auto;
+    min-height: 100vh;
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+.navigator{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: var(--blue);
+    transition: 0.5s;
+    left: 0;
+}
+
+.navigator.active{
+    width: 80px;
+}
+.navigator ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigator ul li{
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.navigator ul li a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    display: flex;
+    color: var(--white);
+}
+.navigator ul li:hover{
+    background-color: white;
+}
+.navigator ul li a:hover{
+    color: var(--blue);
+}
+.navigator ul li:nth-child(1){
+    /* margin-bottom: 40px; */
+    background-color: crimson;
+    font-size: 25px !important;
+    border-radius: 0px;
+}
+
+#cname{
+    font-size: 30px;
+}
+#clogo{
+    padding-top: 8px;
+}
+.navigator ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    text-align: center !important;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.navigator ul li a .title{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.navigator ul li a .icon ion-icon{
+    font-size: 1.75em;
+}

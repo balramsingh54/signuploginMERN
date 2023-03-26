@@ -169,7 +169,7 @@ const Login = () => {
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                <Link to="/register">Create Account</Link>
+                                <Link to="/home">Create Account</Link>
                                 </Grid>
                             </Grid>
                             <Copyright sx={{ mt: 5 }} />

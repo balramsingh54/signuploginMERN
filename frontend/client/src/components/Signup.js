@@ -76,7 +76,7 @@ const Signup = () => {
                     console.log(result);
                 })
 
-            navigate("/dashboard");
+            navigate("/home");
         }
         else {
             alert('invalid input');

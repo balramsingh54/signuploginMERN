@@ -1,8 +1,14 @@
 import React from 'react'
+import '../styles/home.css';
+import HomeNav from './HomeNav';
+import LeftDashboard from './LeftDashboard';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <HomeNav/>
+      <LeftDashboard/>
+    </div>
   )
 }
 
