@@ -10,9 +10,10 @@ body{
     min-height: 100vh;
 }
 .container{
-    width: 100%;
-    position: relative;
+    position: absolute;
 }
+
+
 .navigator{
     position: fixed;
     width: 250px;
@@ -20,16 +21,16 @@ body{
     background: var(--blue);
     transition: 0.5s;
     left: 0;
+    top: 61px;
 }
 
-.navigator.active{
+
+/* .navigator.active{
     width: 80px;
-}
-.navigator ul{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+} */
+
+ul{
+    margin-left: -32px;
 }
 
 .navigator ul li{
@@ -41,6 +42,7 @@ body{
     border-bottom-left-radius: 50px;
 }
 
+
 .navigator ul li a{
     text-decoration: none;
     display: block;
@@ -48,25 +50,36 @@ body{
     display: flex;
     color: var(--white);
 }
+
+
 .navigator ul li:hover{
     background-color: white;
 }
+
+
 .navigator ul li a:hover{
     color: var(--blue);
 }
+
+
+
 .navigator ul li:nth-child(1){
-    /* margin-bottom: 40px; */
     background-color: crimson;
     font-size: 25px !important;
     border-radius: 0px;
 }
 
-#cname{
+
+/* #cname{
     font-size: 30px;
-}
+} */
+
+
 #clogo{
     padding-top: 8px;
 }
+
+
 .navigator ul li a .icon{
     position: relative;
     display: block;
@@ -74,7 +87,15 @@ body{
     text-align: center !important;
     font-size: 25px;
     padding-top: 10px;
+    padding-left: 10px;
 }
+
+
+.navigator ul li a .icon ion-icon{
+    font-size: 1.75em;
+}
+
+
 
 .navigator ul li a .title{
     position: relative;
@@ -85,8 +106,4 @@ body{
     line-height: 60px;
     font-size: 18px;
     padding-left: 20px;
-}
-
-.navigator ul li a .icon ion-icon{
-    font-size: 1.75em;
 }

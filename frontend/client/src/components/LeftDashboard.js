@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/LeftDashboard.css';
 import { AiOutlineDashboard } from "react-icons/ai";
-import { GrUserSettings } from "react-icons/gr";
+import { TbUsers } from "react-icons/tb";
 import { BiCodeAlt } from "react-icons/bi";
 import { BiMath } from "react-icons/bi";
 import { MdOutlineScience } from "react-icons/md";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { TfiComments } from "react-icons/tfi";
-import { GrSettingsOption } from "react-icons/gr";
+import { CiSettings } from "react-icons/ci";
 import { MdDetails } from "react-icons/md";
 // import { BiCodeAlt } from "react-icons/bi";
 
@@ -20,13 +20,13 @@ const LeftDashboard = () => {
                     <ul>
                         <li>
                             <a href="!">
-                                <span className="icon"><AiOutlineDashboard/></span>
+                                <span className="icon"><AiOutlineDashboard /></span>
                                 <span className="title">Dashboard</span>
                             </a>
                         </li>
                         <li>
                             <a href="!">
-                                <span className="icon"><GrUserSettings/></span>
+                                <span className="icon"><TbUsers /></span>
                                 <span className="title">Students</span>
                             </a>
                         </li>
@@ -62,7 +62,7 @@ const LeftDashboard = () => {
                         </li>
                         <li>
                             <a href="!">
-                                <span className="icon"><GrSettingsOption></GrSettingsOption></span>
+                                <span className="icon"><CiSettings></CiSettings></span>
                                 <span className="title">Setting</span>
                             </a>
                         </li>
@@ -73,22 +73,6 @@ const LeftDashboard = () => {
                             </a>
                         </li>
                     </ul>
-                </div>
-                <div className="main">
-                    <div className="top-bar">
-                        <div className="toggle">
-                            <ion-icon name="menu-outline"></ion-icon>
-                        </div>
-                        <div className="search">
-                            <label>
-                                <ion-icon id="search-icon" name="search-outline"></ion-icon>
-                            </label>
-                        </div>
-                        <div>
-                            <div className="users">
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
