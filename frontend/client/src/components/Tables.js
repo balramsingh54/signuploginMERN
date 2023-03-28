@@ -6,23 +6,30 @@ import axios from 'axios';
 const Tables = () => {
 
   const [data, setData] = useState([]);
+  // studentData();
 
   const studentData = async () => {
-    await axios.get('http://localhost:5000/classes').then(response => {
-      response = response.data.data;
-      setData(response);
-      console.log(response);
+    await axios.get('http://localhost:5000/classes')
+    .then(res => res.data)
+    .then(res_ => {
+      // response = response.data.data;
+      setData(res_.data);
+      // console.log('------',data);
+      //console.log('....',res.data.data);
     });
   }
 
+  useEffect(() => {studentData()},[])
+
   useEffect(() => {
-    studentData();
+    // studentData();
+    console.log('///////////////',data);
     // console.log(studentData());
     // const value = studentData();
     // setData(value);
     // console.log(value)
-    // console.log(setData);
-  },[]);
+    // console.log(data)
+  },[data]);
 
   return (
     <Table striped bordered hover>
@@ -39,17 +46,16 @@ const Tables = () => {
       </thead>
       <tbody>
         {
-          // data.map((datas) => {
-          //   <tr>
-          //     <td>{datas.name}</td>
-          //     <td>{datas.name}</td>
-          //     <td>{datas.name}</td>
-          //     <td>{datas.name}</td>
-          //     <td>{datas.name}</td>
-          //     <td>{datas.name}</td>
-          //     <td>{datas.name}</td>
-          //   </tr>
-          // })
+          data.map((item) => { return <tr>
+              <td>{item.name}</td>
+              <td>{item.name}</td>
+              <td>{item.name}</td>
+              <td>{item.name}</td>
+              <td>{item.name}</td>
+              <td>{item.name}</td>
+              <td>{item.name}</td>
+            </tr>
+          })
         }
       </tbody>
     </Table>
