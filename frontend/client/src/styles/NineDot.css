@@ -1,0 +1,25 @@
+.ninedot{
+    float: right;
+    margin-right: 50px;
+    width: 24%;
+    background-color: #dee2e7;
+    border: 1px solid darkgray;
+    z-index: 2;
+}
+
+.innerdot{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+}
+
+.content{
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.content:hover{
+    background-color: darkgray;
+    color: white;
+}

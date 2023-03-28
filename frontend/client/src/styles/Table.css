@@ -1,0 +1,10 @@
+Table{
+    box-sizing: border-box;
+    position: relative;
+    max-width: calc(100% - 290px);
+    left: 280px;
+    background: var(--white);
+    transition: 0.5s;
+    overflow: auto;
+    top: 65px;
+}

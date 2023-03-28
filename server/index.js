@@ -105,6 +105,16 @@ app.post('/', (req, res) => {
   })
 })
 
+app.get('/classes', (req, res) => {
+  var sql = `select * from class4`;
+
+  conn.query(sql, (err, result) => {
+    if (err) throw err;
+    res.send( { data: result });
+  })
+})
+
 app.listen(5000, () =>
   console.log(`app listening on port 5000`),
 );
+
