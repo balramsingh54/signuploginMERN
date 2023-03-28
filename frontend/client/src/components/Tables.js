@@ -5,14 +5,13 @@ import axios from 'axios';
 
 const Tables = () => {
 
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   const studentData = async () => {
     await axios.get('http://localhost:5000/classes').then(response => {
       response = response.data.data;
-      console.log(response[0].name);
       setData(response);
-      return response;
+      console.log(response);
     });
   }
 
@@ -23,7 +22,7 @@ const Tables = () => {
     // setData(value);
     // console.log(value)
     // console.log(setData);
-  }, []);
+  },[]);
 
   return (
     <Table striped bordered hover>
@@ -40,17 +39,17 @@ const Tables = () => {
       </thead>
       <tbody>
         {
-          data.map((datas) => {
-            <tr>
-              <td>{datas.name}</td>
-              <td>{datas.name}</td>
-              <td>{datas.name}</td>
-              <td>{datas.name}</td>
-              <td>{datas.name}</td>
-              <td>{datas.name}</td>
-              <td>{datas.name}</td>
-            </tr>
-          })
+          // data.map((datas) => {
+          //   <tr>
+          //     <td>{datas.name}</td>
+          //     <td>{datas.name}</td>
+          //     <td>{datas.name}</td>
+          //     <td>{datas.name}</td>
+          //     <td>{datas.name}</td>
+          //     <td>{datas.name}</td>
+          //     <td>{datas.name}</td>
+          //   </tr>
+          // })
         }
       </tbody>
     </Table>
