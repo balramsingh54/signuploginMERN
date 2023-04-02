@@ -6,7 +6,6 @@ import axios from 'axios';
 const Tables = () => {
 
   const [data, setData] = useState([]);
-  // studentData();
 
   const studentData = async () => {
     await axios.get('http://localhost:5000/classes')
@@ -15,7 +14,7 @@ const Tables = () => {
       // response = response.data.data;
       setData(res_.data);
       // console.log('------',data);
-      //console.log('....',res.data.data);
+      console.log('....',data);
     });
   }
 
@@ -24,11 +23,6 @@ const Tables = () => {
   useEffect(() => {
     // studentData();
     console.log('///////////////',data);
-    // console.log(studentData());
-    // const value = studentData();
-    // setData(value);
-    // console.log(value)
-    // console.log(data)
   },[data]);
 
   return (
@@ -46,14 +40,14 @@ const Tables = () => {
       </thead>
       <tbody>
         {
-          data.map((item) => { return <tr>
+          data.map((item , i) => { return <tr key ={i}>
+              <td>{item.id}</td>
               <td>{item.name}</td>
-              <td>{item.name}</td>
-              <td>{item.name}</td>
-              <td>{item.name}</td>
-              <td>{item.name}</td>
-              <td>{item.name}</td>
-              <td>{item.name}</td>
+              <td>{item.fee_status}</td>
+              <td>{item.total_due_fee}</td>
+              <td>{item.mobile_no}</td>
+              <td>{item.address}</td>
+              <td>{item.Advance}</td>
             </tr>
           })
         }

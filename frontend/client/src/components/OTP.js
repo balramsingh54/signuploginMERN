@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
-// import { MDBBtn, MDBContainer, MDBRow, MDBCol, MDBInput } from 'mdb-react-ui-kit';
-// import { resume } from '../../../../server/db_connection';
 import '../styles/signup.css';
 import '../styles/login.css';
 import Avatar from '@mui/material/Avatar';
@@ -19,23 +17,9 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
-
-function Copyright(props) {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
-            {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Balram Singh
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
 const theme = createTheme();
 
-const Login = () => {
+const OTP = () => {
 
     const navigate = useNavigate();
 
@@ -66,26 +50,6 @@ const Login = () => {
         );
     };
 
-    // return (
-    //     <div className='registration'>
-    //         <h1>Login</h1>
-    //         <form>
-    //             <label className="label">Email</label>
-    //             <input onChange={handleEmail} className="input"
-    //                 value={email} type="email" />
-
-    //             <label className="label">Password</label>
-    //             <input onChange={handlePassword} className="input"
-    //                 value={password} type="password" />
-
-    //             <button id='btnn' className="btn" onClick={handleSubmit} type='submit'>
-    //                 Login
-    //             </button>
-    //             Or <span> {'  '}</span>
-    //             <Link to="/register">Create Account</Link>
-    //         </form>
-    //     </div>
-    // )
 
     return (
         <ThemeProvider theme={theme}>
@@ -137,23 +101,6 @@ const Login = () => {
                                 autoFocus
                             />
 
-                            <TextField
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="password"
-                                label="Password"
-                                type="password"
-                                id="password"
-                                onChange={handlePassword}
-                                value={password}
-                                autoComplete="current-password"
-                            />
-
-                            <FormControlLabel
-                                control={<Checkbox value="remember" color="primary" />}
-                                label="Remember me"
-                            />
                             <Button
                                 type="submit"
                                 fullWidth
@@ -168,11 +115,7 @@ const Login = () => {
                                         Forgot password?
                                     </Link>
                                 </Grid>
-                                <Grid item>
-                                <Link to="/register">Create Account</Link>
-                                </Grid>
                             </Grid>
-                            <Copyright sx={{ mt: 5 }} />
                         </Box>
                     </Box>
                 </Grid>
@@ -181,4 +124,4 @@ const Login = () => {
     );
 }
 
-export default Login
+export default OTP

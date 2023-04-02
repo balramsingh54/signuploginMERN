@@ -3,6 +3,7 @@ import HomeNav from './HomeNav'
 import LeftDashboard from './LeftDashboard'
 import Tables from './Tables'
 
+
 const Classes = () => {
     return (
         <div>
@@ -14,3 +15,5 @@ const Classes = () => {
 }
 
 export default Classes
+
+

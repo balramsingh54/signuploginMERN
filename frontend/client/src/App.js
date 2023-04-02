@@ -5,6 +5,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from './components/Dashboard';
 import Home from './components/Home';
 import Classes from './components/Classes';
+import Forgot_password from './components/Forgot_password';
+import PageNotFound from './components/PageNotFound';
+import OTP from './components/OTP';
 
 const App = () => {
 
@@ -22,6 +25,10 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/home" element={<Home />} />
         <Route path="/classes" element={<Classes />} />
+        <Route path="/forgot-password" element={<Forgot_password />}>
+          <Route path='otp' element = {<OTP/>}/>
+        </Route>
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   )

@@ -80,6 +80,12 @@ app.post('/register', (req, res) => {
 
 })
 
+app.get('/forgot-password', (req, resp) => {
+  resp.send({ name: "balram", age: 26 });
+})
+
+
+
 app.post('/', (req, res) => {
 
   const email = req.body.email;
@@ -110,7 +116,7 @@ app.get('/classes', (req, res) => {
 
   conn.query(sql, (err, result) => {
     if (err) throw err;
-    res.send( { data: result });
+    res.send({ data: result });
   })
 })
 
