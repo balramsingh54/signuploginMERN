@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/classes" element={<Classes />} />
         <Route path="/forgot-password" element={<Forgot_password />}>
-          <Route path='otp' element = {<OTP/>}/>
+          <Route path="otp" element={<OTP />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
@@ -35,3 +35,4 @@ const App = () => {
 }
 
 export default App;
+

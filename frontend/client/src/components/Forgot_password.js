@@ -1,8 +1,9 @@
-import axios from 'axios';
+//import axios from 'axios';
 import React, { useState } from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import '../styles/signup.css';
 import '../styles/login.css';
+import '../styles/otp.css';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,12 +17,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 
-
 const theme = createTheme();
 
 const Forgot_password = () => {
 
-    const navigate = useNavigate();
+   // const navigate = useNavigate();
 
     // States for registration
     const [email, setEmail] = useState('');
@@ -37,7 +37,7 @@ const Forgot_password = () => {
         e.preventDefault();
         console.log('this is forgot password');
 
-        
+
         // axios.post('http://localhost:5000/forgot-password', { email: email }).then(response => {
         //     if (response.data.email === email) {
         //         navigate("/dashboard");
@@ -96,17 +96,16 @@ const Forgot_password = () => {
                                 autoComplete="email"
                                 autoFocus
                             />
+                            <Link className='otplink' to="otp">
+                                <Button
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    sx={{ mt: 3, mb: 2 }}
 
-                            <Button
-                                type="submit"
-                                fullWidth
-                                variant="contained"
-                                sx={{ mt: 3, mb: 2 }}
-                                
-                            >
-                            <Link to="/otp"></Link>
-                                Send Email
-                            </Button>
+                                >Send Email
+                                </Button>
+                            </Link>
                             <Grid container>
                                 <Grid item xs>
                                     <Link to="/" variant="body2">
@@ -114,6 +113,7 @@ const Forgot_password = () => {
                                     </Link>
                                 </Grid>
                             </Grid>
+                            <Outlet></Outlet>
                         </Box>
                     </Box>
                 </Grid>

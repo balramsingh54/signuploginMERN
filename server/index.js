@@ -19,16 +19,6 @@ app.get('/', (req, res) => {
   res.render('insert');
 })
 
-// app.get('/api', (req, res) => {
-//   res.json(
-//     [
-//       {name: "Balram", age: 25, address: "chandigarh"},
-//       {name: "suman", age: 26, address: "chandigarh"},
-//       {name: "savita", age: 24, address: "chandigarh"},
-//     ]
-//   )
-// })
-
 app.post('/insert', (req, res) => {
   var name = req.body.name;
   var email = req.body.email;

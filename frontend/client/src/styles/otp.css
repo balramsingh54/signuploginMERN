@@ -1,0 +1,10 @@
+.otplink{
+    color: rgb(24, 3, 139) !important;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    margin-top: 30px;
+}
+
+.otplink:hover{
+    color: rgb(190, 6, 6) !important;
+}
