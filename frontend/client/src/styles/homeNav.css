@@ -18,6 +18,11 @@
     font-weight: bold;
 }
 
+.addnewStudent{
+    font-size: 25px !important;
+    cursor: pointer;
+}
+
 .ri{
     display: inline;
 }

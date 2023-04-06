@@ -1,6 +1,6 @@
 import React from 'react';
 import { MuiOtpInput } from 'mui-one-time-password-input';
-//import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import '../styles/otp.css';
 
@@ -13,6 +13,7 @@ const OTP = () => {
 
   return (
     <div>
+      <Outlet></Outlet>
       <h1>Please Enter OTP</h1>
       <MuiOtpInput TextFieldsProps={{ placeholder: '-' }} value={otp} onChange={handleChange} />
       <Button

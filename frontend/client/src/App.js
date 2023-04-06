@@ -8,14 +8,9 @@ import Classes from './components/Classes';
 import Forgot_password from './components/Forgot_password';
 import PageNotFound from './components/PageNotFound';
 import OTP from './components/OTP';
+import AddNewUser from './components/AddNewUser';
 
 const App = () => {
-
-  // useEffect(() => {
-  //   fetch('/api')
-  //     .then((res) => { return res.json() })
-  //     .then((data) => { console.log(data) })
-  // }, [])
 
   return (
     <BrowserRouter>
@@ -25,6 +20,7 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/home" element={<Home />} />
         <Route path="/classes" element={<Classes />} />
+        <Route path="/addstudent" element={<AddNewUser />} />
         <Route path="/forgot-password" element={<Forgot_password />}>
           <Route path="otp" element={<OTP />} />
         </Route>

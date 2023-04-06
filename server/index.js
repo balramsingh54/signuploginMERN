@@ -3,6 +3,7 @@ const cors = require('cors')
 const bodyparser = require('body-parser')
 const conn = require('./db_connection.js');
 const { name } = require('ejs');
+const sendEmail = require('./sendMail');
 
 var app = express();
 
@@ -71,7 +72,7 @@ app.post('/register', (req, res) => {
 })
 
 app.get('/forgot-password', (req, resp) => {
-  resp.send({ name: "balram", age: 26 });
+  return sendEmail;
 })
 
 
@@ -102,7 +103,7 @@ app.post('/', (req, res) => {
 })
 
 app.get('/classes', (req, res) => {
-  var sql = `select * from class4`;
+  var sql = `select * from classes`;
 
   conn.query(sql, (err, result) => {
     if (err) throw err;
