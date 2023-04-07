@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/LeftDashboard.css';
 import { AiOutlineDashboard } from "react-icons/ai";
-import { TbUsers } from "react-icons/tb";
+import { FaUserPlus } from "react-icons/fa";
 import { BiCodeAlt } from "react-icons/bi";
 import { BiMath } from "react-icons/bi";
 import { MdOutlineScience } from "react-icons/md";
@@ -9,10 +9,16 @@ import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { TfiComments } from "react-icons/tfi";
 import { CiSettings } from "react-icons/ci";
 import { MdDetails } from "react-icons/md";
-// import { BiCodeAlt } from "react-icons/bi";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+//import AddNewUser from './AddNewUser';
 
 
 const LeftDashboard = () => {
+
+    const [show2, setshow2] = useState(true);
+
+
     return (
         <div>
             <div className="container">
@@ -25,10 +31,10 @@ const LeftDashboard = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="!">
-                                <span className="icon"><TbUsers /></span>
-                                <span className="title">Students</span>
-                            </a>
+                            <Link to="/addstudent" onClick={() => setshow2(!show2)}>
+                                <span className="icon"><FaUserPlus/></span>
+                                <span className="title"> Add Student</span>
+                            </Link>
                         </li>
                         <li>
                             <a href="!">

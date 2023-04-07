@@ -8,7 +8,7 @@ const AddNewUser = () => {
         <div>
             <HomeNav />
             <LeftDashboard />
-            <AddNewUserForm />
+            <AddNewUserForm/>
         </div>
     )
 }

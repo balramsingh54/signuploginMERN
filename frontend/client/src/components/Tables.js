@@ -14,7 +14,6 @@ const Tables = () => {
       // response = response.data.data;
       setData(res_.data);
       // console.log('------',data);
-      console.log('....',data);
     });
   }
 
@@ -22,7 +21,7 @@ const Tables = () => {
 
   useEffect(() => {
     // studentData();
-    console.log('///////////////',data);
+//    console.log('///////////////',data);
   },[data]);
 
   return (

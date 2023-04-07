@@ -11,3 +11,8 @@
 .addstudntform{
   margin-top: 70px;
 }
+
+label{
+  font-size: 18px;
+  font-weight: bold;
+}

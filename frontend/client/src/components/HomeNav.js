@@ -5,7 +5,7 @@ import { FaUserPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import '../styles/homeNav.css';
 import NineDot from './NineDot';
-import AddNewUser from './AddNewUserForm';
+// import AddNewUser from './AddNewUserForm';
 
 
 
@@ -29,7 +29,7 @@ const HomeNav = () => {
           </div>
           <div className="m">
             <div className="navbar-nav ri">
-              <Link to="/addstudent"><p className="nav-right addnewStudent" title='add new student' onClick={() => setShow2(!show2)} ><FaUserPlus/></p></Link>
+              <p className="nav-right addnewStudent" title='add new student' onClick={() => setShow2(!show2)} ><FaUserPlus/></p>
               <p className="nav-right w" title='location'><MdLocationOn /></p>
               <p className="nav-right" title='classes' onClick={() => setShow(!show)}><TbGridDots /></p>
               <p className="nav-right" title='name'>Balram Singh</p>
@@ -42,7 +42,7 @@ const HomeNav = () => {
       },
 
       {
-        show2 ? <AddNewUser /> : null
+        // show2 ? <AddNewUser /> : null
       }
     </div>
   )
