@@ -1,21 +1,20 @@
 import React from 'react'
 import HomeNav from './HomeNav'
 import LeftDashboard from './LeftDashboard'
-import Tables from './Tables'
-import Pagination from './Pagination'
+import '../styles/FeeSubmit.css';
 
 
-const Classes = () => {
+
+const FeeSubmit = () => {
     return (
         <div>
             <HomeNav />
             <LeftDashboard />
-            <Tables />
-            <Pagination/>
+            <div className="feesubmit">
+                hello 
+            </div>
         </div>
     )
 }
 
-export default Classes
-
-
+export default FeeSubmit

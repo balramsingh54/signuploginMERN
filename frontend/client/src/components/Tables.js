@@ -34,7 +34,7 @@ const Tables = () => {
           <th>Total Due Fee</th>
           <th>Mobile</th>
           <th>Address</th>
-          <th>Action</th>
+          <th>Section</th>
         </tr>
       </thead>
       <tbody>
@@ -46,7 +46,7 @@ const Tables = () => {
               <td>{item.total_due_fee}</td>
               <td>{item.mobile_no}</td>
               <td>{item.address}</td>
-              <td>{item.Advance}</td>
+              <td>{item.section}</td>
             </tr>
           })
         }

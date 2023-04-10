@@ -9,6 +9,7 @@ import Forgot_password from './components/Forgot_password';
 import PageNotFound from './components/PageNotFound';
 import OTP from './components/OTP';
 import AddNewUser from './components/AddNewUser';
+import FeeSubmit from './components/FeeSubmit';
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/classes" element={<Classes />} />
         <Route path="/addstudent" element={<AddNewUser />} />
+        <Route path="/fee-submit" element={<FeeSubmit />} />
         <Route path="/forgot-password" element={<Forgot_password />}>
           <Route path="otp" element={<OTP />} />
         </Route>
@@ -31,4 +33,5 @@ const App = () => {
 }
 
 export default App;
+
 

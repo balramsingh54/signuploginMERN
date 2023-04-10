@@ -9,6 +9,7 @@ import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { TfiComments } from "react-icons/tfi";
 import { CiSettings } from "react-icons/ci";
 import { MdDetails } from "react-icons/md";
+import { MdCurrencyRupee } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 //import AddNewUser from './AddNewUser';
@@ -25,14 +26,14 @@ const LeftDashboard = () => {
                 <div className="navigator">
                     <ul>
                         <li>
-                            <a href="!">
-                                <span className="icon"><AiOutlineDashboard /></span>
-                                <span className="title">Dashboard</span>
-                            </a>
+                            <Link to="/fee-submit">
+                                <span className="icon"><MdCurrencyRupee /></span>
+                                <span className="title"> Fee Submit</span>
+                            </Link>
                         </li>
                         <li>
                             <Link to="/addstudent" onClick={() => setshow2(!show2)}>
-                                <span className="icon"><FaUserPlus/></span>
+                                <span className="icon"><FaUserPlus /></span>
                                 <span className="title"> Add Student</span>
                             </Link>
                         </li>
@@ -63,7 +64,7 @@ const LeftDashboard = () => {
                         <li>
                             <a href="!">
                                 <span className="icon"><TfiComments></TfiComments></span>
-                                <span className="title">Comments</span>
+                                <span className="title">Feedback</span>
                             </a>
                         </li>
                         <li>

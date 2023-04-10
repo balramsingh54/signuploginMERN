@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -6,7 +7,7 @@ import '../styles/AddNewUserForm.css';
 
 const AddNewUserForm = () => {
 
-    const [section, setsection] = useState('class_4');
+    const [section, setsection] = useState('4');
     const [name, setName] = useState('');
     const [fee, setFee] = useState('');
     const [duefee, setDuefee] = useState('');
@@ -42,7 +43,6 @@ const AddNewUserForm = () => {
     }
 
     const resetentry = () => {
-
         setName('');
         setFee('');
         setDuefee('');
@@ -50,15 +50,33 @@ const AddNewUserForm = () => {
         setAddress('')
     }
 
-    const submit = (e) => {
+
+
+    const submit = async (e) => {
         e.preventDefault()
-        const data_ = { section: section, name: name, fee: fee, duefee: duefee, mobile: mobile, address: address }
-        console.log(data_);
-        resetentry();
+        const data_ = {
+            section: section,
+            name: name,
+            fee: fee,
+            duefee: duefee,
+            mobile: mobile,
+            address: address
+        }
+
+        if ((section && name && fee && duefee) !== null) {
+            await axios.post('http://localhost:5000/addstudent', data_)
+                .then((result) => {
+                    console.log(result);
+                })
+
+                .catch(err => {
+                    console.log(err);
+                })
+
+        }
+
+
     }
-
-
-
 
     return (
         <div className='addnewuser'>
@@ -70,14 +88,14 @@ const AddNewUserForm = () => {
                         value={section}
                         onChange={handleSection}
                     >
-                        <option value="class_4">class 4</option>
-                        <option value="class_5">class 5</option>
-                        <option value="class_6">class 6</option>
-                        <option value="class_7">class 7</option>
-                        <option value="class_8">class 8</option>
-                        <option value="class_9">class 9</option>
-                        <option value="class_10">class 10</option>
-                        <option value="class_11">class 11</option>
+                        <option value="4">class 4</option>
+                        <option value="5">class 5</option>
+                        <option value="6">class 6</option>
+                        <option value="7">class 7</option>
+                        <option value="8">class 8</option>
+                        <option value="9">class 9</option>
+                        <option value="10">class 10</option>
+                        <option value="11">class 11</option>
                     </Form.Control>
                 </Form.Group>
 

@@ -71,9 +71,38 @@ app.post('/register', (req, res) => {
 
 })
 
-app.get('/forgot-password', (req, resp) => {
-  return sendEmail;
+app.post('/addstudent', (req, resp) => {
+  var section = req.body.section;
+  var name = req.body.name;
+  var fee = req.body.fee;
+  var duefee = req.body.duefee;
+  var mobile = req.body.mobile;
+  var address = req.body.address;
+
+  var sql = `insert into new_student(section, name, fee_status, total_due_fee, mobile_no, address) values ('${section}', '${name}', '${fee}', '${duefee}', '${mobile}','${address}' )`;
+
+  conn.query(sql, (err, result) => {
+    if (err) throw err;
+
+    var formData = {
+      section: section,
+      name: name,
+      fee_status: fee,
+      total_due_fee: duefee,
+      mobile_no: mobile,
+      address: address,
+    };
+
+    return resp.send({
+      response: result
+    });
+  })
+
 })
+
+// app.get('/forgot-password', (req, resp) => {
+//   return sendEmail;
+// })
 
 
 
@@ -103,7 +132,7 @@ app.post('/', (req, res) => {
 })
 
 app.get('/classes', (req, res) => {
-  var sql = `select * from classes`;
+  var sql = `select * from new_student order by id desc`;
 
   conn.query(sql, (err, result) => {
     if (err) throw err;
@@ -114,4 +143,3 @@ app.get('/classes', (req, res) => {
 app.listen(5000, () =>
   console.log(`app listening on port 5000`),
 );
-
