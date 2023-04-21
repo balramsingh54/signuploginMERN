@@ -10,7 +10,6 @@ const Classes = () => {
         <div>
             <HomeNav />
             <LeftDashboard />
-            <Tables />
             <Pagination/>
         </div>
     )

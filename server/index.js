@@ -111,16 +111,17 @@ app.post('/', (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
-  var sql = `select email, password from registration where email = '${email}' and password = '${password}'`;
+  var sql = `select name, email, password from registration where email = '${email}' and password = '${password}'`;
   conn.query(sql, (err, result) => {
     if (err) throw err;
 
-    if (result.length === 1) {
+    else if (result.length === 1) {
       console.log("you have logged in successfully ");
       // res.redirect("/dashboard");
       return res.send({
         email: email,
-        password: password
+        password: password,
+        name: name
       });
     }
 

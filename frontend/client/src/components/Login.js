@@ -39,6 +39,8 @@ const Login = () => {
 
     const navigate = useNavigate();
 
+   // const [user_name, setUser_name]= useState('User');
+
     // States for registration
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -60,10 +62,12 @@ const Login = () => {
 
         axios.post('http://localhost:5000/', { email: email, password: password }).then(response => {
             if (response.data.email === email && response.data.password === password) {
-                navigate("/dashboard");
+                localStorage.setItem('user-info', response.data);
+                navigate("/home");
             }
         }
         );
+
     };
 
     // return (
