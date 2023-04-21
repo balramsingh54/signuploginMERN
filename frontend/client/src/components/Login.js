@@ -17,6 +17,7 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Snakbar from './Snakbar';
 
 
 
@@ -39,7 +40,7 @@ const Login = () => {
 
     const navigate = useNavigate();
 
-   // const [user_name, setUser_name]= useState('User');
+    // const [user_name, setUser_name]= useState('User');
 
     // States for registration
     const [email, setEmail] = useState('');
@@ -62,8 +63,10 @@ const Login = () => {
 
         axios.post('http://localhost:5000/', { email: email, password: password }).then(response => {
             if (response.data.email === email && response.data.password === password) {
-                localStorage.setItem('user-info', response.data);
+                localStorage.setItem('user-info', response.data.name);
+                <Snakbar/>
                 navigate("/home");
+                <Snakbar/>
             }
         }
         );
@@ -168,12 +171,12 @@ const Login = () => {
                             </Button>
                             <Grid container>
                                 <Grid item xs>
-                                    <Link to= "/forgot-password" variant="body2">
+                                    <Link to="/forgot-password" variant="body2">
                                         Forgot password?
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                <Link to="/register">Create Account</Link>
+                                    <Link to="/register">Create Account</Link>
                                 </Grid>
                             </Grid>
                             <Copyright sx={{ mt: 5 }} />

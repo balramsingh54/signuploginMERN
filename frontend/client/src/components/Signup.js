@@ -74,9 +74,9 @@ const Signup = () => {
         if (name && email && password && confirmPassword && (password === confirmPassword)) {
             axios.post('http://localhost:5000/register', data)
                 .then((result) => {
-                    console.log(result);
+                    localStorage.setItem('user-info', result.data.response.name);
                 })
-            
+
             navigate("/home");
             <Snakbar/>
 
@@ -238,7 +238,7 @@ const Signup = () => {
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                <Link to="/">Login Now !</Link>
+                                    <Link to="/">Login Now !</Link>
                                 </Grid>
                             </Grid>
                             <Copyright sx={{ mt: 5 }} />

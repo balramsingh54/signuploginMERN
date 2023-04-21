@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const bodyparser = require('body-parser')
 const conn = require('./db_connection.js');
-const { name } = require('ejs');
+//const { name } = require('ejs');
 const sendEmail = require('./sendMail');
 
 var app = express();
@@ -65,11 +65,46 @@ app.post('/register', (req, res) => {
     };
 
     return res.send({
-      response: request
+      response: request,
     });
   })
 
 })
+
+
+
+// app.get('/forgot-password', (req, resp) => {
+//   return sendEmail;
+// })
+
+
+
+app.post('/', (req, res) => {
+
+  const email = req.body.email;
+  const password = req.body.password;
+
+  var sql = `select name, email, password from registration where email = '${email}' and password = '${password}'`;
+  conn.query(sql, (err, result) => {
+    if (err) throw err;
+
+    else if (result.length === 1) {
+      console.log("you have logged in successfully ");
+      // res.redirect("/dashboard");
+      return res.send({
+        email: email,
+        password: password,
+        name: result[0].name
+      });
+    }
+
+    else {
+      console.log("Sorry Login failed! ")
+    }
+
+  })
+})
+
 
 app.post('/addstudent', (req, resp) => {
   var section = req.body.section;
@@ -98,38 +133,6 @@ app.post('/addstudent', (req, resp) => {
     });
   })
 
-})
-
-// app.get('/forgot-password', (req, resp) => {
-//   return sendEmail;
-// })
-
-
-
-app.post('/', (req, res) => {
-
-  const email = req.body.email;
-  const password = req.body.password;
-
-  var sql = `select name, email, password from registration where email = '${email}' and password = '${password}'`;
-  conn.query(sql, (err, result) => {
-    if (err) throw err;
-
-    else if (result.length === 1) {
-      console.log("you have logged in successfully ");
-      // res.redirect("/dashboard");
-      return res.send({
-        email: email,
-        password: password,
-        name: name
-      });
-    }
-
-    else {
-      console.log("Sorry Login failed! ")
-    }
-
-  })
 })
 
 app.get('/classes', (req, res) => {
