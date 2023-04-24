@@ -91,6 +91,7 @@ app.post('/', (req, res) => {
     else if (result.length === 1) {
       console.log("you have logged in successfully ");
       // res.redirect("/dashboard");
+     // console.log(result);
       return res.send({
         email: email,
         password: password,

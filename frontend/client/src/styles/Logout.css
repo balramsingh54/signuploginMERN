@@ -1,16 +1,19 @@
-.ninedot{
+.logout{
     float: right;
-    margin-right: 50px;
+    margin-right: 50 px;
     position: sticky;
-    width: 23%;
+    width: 20%;
     background-color: #dee2e7;
     border: 1px solid darkgray;
     z-index:999999999;
 }
 
-.innerdot{
+.innerlogout{
+    top: 60px;
+    /* right: 10px; */
+    width: 20%;
     display: grid;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(1, 300px);
     position: fixed;
     background-color: gainsboro;
 }
@@ -25,4 +28,14 @@
 .content:hover{
     background-color: darkgray;
     color: white;
+}
+
+.details{
+    text-align: center;
+    margin: 5px 0;
+}
+
+img{
+    width: 100px;
+    padding: 0;
 }

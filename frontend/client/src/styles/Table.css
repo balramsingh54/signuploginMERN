@@ -8,3 +8,7 @@ Table{
     overflow: auto;
     top: 65px;
 }
+
+tbody{
+    text-align: center;
+}

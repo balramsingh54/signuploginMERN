@@ -10,6 +10,9 @@ import PageNotFound from './components/PageNotFound';
 import OTP from './components/OTP';
 import AddNewUser from './components/AddNewUser';
 import FeeSubmit from './components/FeeSubmit';
+import Toastifi from './components/Toastifi';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
@@ -27,6 +30,7 @@ const App = () => {
           <Route path="otp" element={<OTP />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
+        <Route path="toastifi" element={<Toastifi />} />
       </Routes>
     </BrowserRouter>
   )

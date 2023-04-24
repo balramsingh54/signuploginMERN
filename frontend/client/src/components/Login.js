@@ -17,7 +17,6 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Snakbar from './Snakbar';
 
 
 
@@ -64,9 +63,10 @@ const Login = () => {
         axios.post('http://localhost:5000/', { email: email, password: password }).then(response => {
             if (response.data.email === email && response.data.password === password) {
                 localStorage.setItem('user-info', response.data.name);
-                <Snakbar/>
+                localStorage.setItem('user-email', response.data.email);
+                console.log(response.data.email);
                 navigate("/home");
-                <Snakbar/>
+
             }
         }
         );
