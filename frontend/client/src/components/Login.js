@@ -61,38 +61,21 @@ const Login = () => {
         e.preventDefault();
 
         axios.post('http://localhost:5000/', { email: email, password: password }).then(response => {
-            if (response.data.email === email && response.data.password === password) {
+            if (response.data.status === 1) {
                 localStorage.setItem('user-info', response.data.name);
                 localStorage.setItem('user-email', response.data.email);
-                console.log(response.data.email);
+                console.log(response.data);
                 navigate("/home");
 
             }
+            else if(response.data.status === 0){
+                alert(response.data.message);
+            }
+
         }
         );
 
     };
-
-    // return (
-    //     <div className='registration'>
-    //         <h1>Login</h1>
-    //         <form>
-    //             <label className="label">Email</label>
-    //             <input onChange={handleEmail} className="input"
-    //                 value={email} type="email" />
-
-    //             <label className="label">Password</label>
-    //             <input onChange={handlePassword} className="input"
-    //                 value={password} type="password" />
-
-    //             <button id='btnn' className="btn" onClick={handleSubmit} type='submit'>
-    //                 Login
-    //             </button>
-    //             Or <span> {'  '}</span>
-    //             <Link to="/register">Create Account</Link>
-    //         </form>
-    //     </div>
-    // )
 
     return (
         <ThemeProvider theme={theme}>

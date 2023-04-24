@@ -86,21 +86,36 @@ app.post('/', (req, res) => {
 
   var sql = `select name, email, password from registration where email = '${email}' and password = '${password}'`;
   conn.query(sql, (err, result) => {
-    if (err) throw err;
+   // if (err) throw err;
 
-    else if (result.length === 1) {
+    if (result.length === 1) {
       console.log("you have logged in successfully ");
       // res.redirect("/dashboard");
      // console.log(result);
       return res.send({
         email: email,
         password: password,
-        name: result[0].name
+        name: result[0].name,
+        status : 1
       });
+    }
+
+    else if (result.length === 0) {
+      //console.log("User does not exists");
+      return res.send({
+        email: email,
+        password: password,
+        message: 'Invalid Input',
+        status: 0
+      },);
     }
 
     else {
       console.log("Sorry Login failed! ")
+      // return res.send({
+      //   email: email,
+      //   password: password,
+      // });
     }
 
   })
