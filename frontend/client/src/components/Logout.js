@@ -15,7 +15,7 @@ const Logout = () => {
 
     const logout = () =>{
         localStorage.clear();
-        navigate('/register')
+        navigate('/')
     }
 
 

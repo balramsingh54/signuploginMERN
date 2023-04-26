@@ -1,10 +1,10 @@
 .maindashboard {
   box-sizing: border-box;
   position: relative;
-  width: calc(100% - 290px);
-  left: 280px;
+  width: calc(100% - 253px);
+  left: 250px;
   background: var(--white);
   transition: 0.5s;
   overflow: auto;
-  top: 65px;
+  top: 60px;
 }
