@@ -19,7 +19,7 @@ const ImageSlider = () => {
 
                 <CarouselItem key={i}>
 
-                    <img src={item} alt="" className="d-block w-100" />
+                    <img src={item} alt="" className="d-block w-100 imgslider_" />
                     <Carousel.Caption>
                         <h3>First slide label</h3>
                         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

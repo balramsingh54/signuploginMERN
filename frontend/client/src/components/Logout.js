@@ -23,7 +23,7 @@ const Logout = () => {
         <div>
             <div className='logout'>
                 <div className="innerlogout">
-                    <Link className='content' to="/profile"><img src="https://www.62icon.com/client/assets/img/like-icon.svg" alt="sdfgh" /></Link>
+                    <Link className='content' to="/profile"><img className='imgcla' src="https://www.62icon.com/client/assets/img/like-icon.svg" alt="sdfgh" /></Link>
                     <p className='details'>{user_email}</p>
                     <p className='details' onClick={logout}><Link>Logout</Link></p>
 
